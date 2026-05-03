@@ -59,6 +59,18 @@ export default function AdminDashboard() {
       color: "from-secondary/80 to-primary",
       testid: "dash-card-users",
     },
+    {
+      to: "/admin/stundas",
+      label: "Konflikti",
+      desc: "Stundu pārklāšanās",
+      count: stats.conflicts,
+      icon: AlertTriangle,
+      color:
+        stats.conflicts > 0
+          ? "from-destructive to-destructive/60"
+          : "from-primary to-secondary",
+      testid: "dash-card-conflicts",
+    },
   ];
 
   return (
@@ -93,7 +105,7 @@ export default function AdminDashboard() {
         </Link>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
         {cards.map((c) => (
           <Link
             key={c.to}
