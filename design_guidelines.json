@@ -1,0 +1,99 @@
+{
+  "project_name": "Aurora Academy Website & Admin Portal",
+  "theme": "light_and_dark",
+  "archetype": "Modern Vibrant (Blend of Archetype 4 & 6)",
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "DM Sans",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-black",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-semibold",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm text-muted-foreground",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em]"
+    }
+  },
+  "colors": {
+    "light": {
+      "background": "#F9FAFB",
+      "surface": "#FFFFFF",
+      "primary": "#2563EB",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#FF6B6B",
+      "secondary_foreground": "#FFFFFF",
+      "text_primary": "#0F172A",
+      "text_secondary": "#475569",
+      "border": "#E2E8F0",
+      "muted": "#F1F5F9",
+      "destructive": "#EF4444",
+      "success": "#10B981"
+    },
+    "dark": {
+      "background": "#09090B",
+      "surface": "#18181B",
+      "primary": "#3B82F6",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#FB7185",
+      "secondary_foreground": "#FFFFFF",
+      "text_primary": "#FAFAFA",
+      "text_secondary": "#A1A1AA",
+      "border": "#27272A",
+      "muted": "#27272A",
+      "destructive": "#F87171",
+      "success": "#34D399"
+    }
+  },
+  "spacing_and_layout": {
+    "generous_padding": "Use p-8 to p-12 for containers, py-20 to py-32 for sections",
+    "bento_grid": "For marketing pages: grid-cols-1 md:grid-cols-8 lg:grid-cols-12 with gap-8",
+    "dashboard_grid": "For admin: grid-cols-1 md:grid-cols-3 lg:grid-cols-4 with gap-6",
+    "container_max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "radius": "rounded-2xl for large cards, rounded-xl for standard, rounded-full for buttons"
+  },
+  "components": {
+    "navbar": "Sticky header with Crystal Glassmorphism (backdrop-blur-xl bg-background/70). Custom hover effect on links: background slides from left to right.",
+    "hero": "Split layout or large image background. Overlay opacity max bg-black/40. CTA buttons should have subtle scale on hover.",
+    "cards": "Subtle border (border-border), flat background, hover:-translate-y-1 hover:shadow-lg transition-all duration-300.",
+    "buttons": "Shadcn based. Add active scale (active:scale-95). Vibrant primary color for main CTAs.",
+    "admin_sidebar": "Fixed left sidebar, dark or light based on theme, crisp borders (border-r border-border).",
+    "tables": "Shadcn Table for schedule and admin lists. Hover states on rows. Clear typography for data.",
+    "forms": "Shadcn Form, Input, Select. Validation with visual error states."
+  },
+  "motion": {
+    "page_transitions": "Framer motion fade-in on scroll (initial={opacity: 0, y: 20} animate={opacity: 1, y: 0}).",
+    "hover_effects": "Cards and buttons subtle scaling. Nav links slide-in background.",
+    "interactions": "Micro-interactions on schedule filtering and news item deletion."
+  },
+  "media": {
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1769430886896-dc30842be5a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBzY2hvb2wlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzc3ODMwMjM5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Modern concrete building. Use with gradient overlay for text readability."
+      },
+      {
+        "category": "about_students",
+        "url": "https://images.unsplash.com/photo-1758270705639-9727f350f026?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwzfHxoYXBweSUyMGRpdmVyc2UlMjBzdHVkZW50cyUyMG1vZGVybiUyMGNsYXNzcm9vbXxlbnwwfHx8fDE3Nzc4MzAyNDB8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Diverse students in a modern classroom."
+      },
+      {
+        "category": "history_school",
+        "url": "https://images.unsplash.com/photo-1770134233415-de8146868a24?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzY2hvb2wlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzc3ODMwMjM5fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Modern building with circular windows."
+      }
+    ],
+    "icons_library": "lucide-react"
+  },
+  "testing": {
+    "data_testid_rule": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case."
+  },
+  "instructions_to_main_agent": [
+    "Use standard Tailwind configuration with CSS variables for dynamic dark mode switching.",
+    "Implement Shadcn UI primitives for admin tables, forms, dropdowns, and dialogs.",
+    "Ensure 'Stundas saraksts' (Schedule) conflict detection is visually prominent in the admin UI (e.g., highlighting rows in red/destructive).",
+    "Apply the specific Navbar sliding background hover effect required by the prompt.",
+    "Keep all copy and route structure corresponding to Latvian sections: Jaunumi, Vēsture, Skolēniem, Skolotājiem, Stundas saraksts."
+  ]
+}
